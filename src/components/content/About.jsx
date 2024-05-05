@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import intel from "@/assets/img/about/intel.jpg";
 import cvPDF from "@/assets/img/about/ENG_NguyenThiHuynhNhi_FrontEnd_CV.pdf";
 import { TypeAnimation } from 'react-type-animation';
+import Parallax from 'parallax-js';
 
 const About = () => {
+
+  if (sceneEl && sceneEl.current) {
+    const sceneEl = useRef(null);
+
+    useEffect(() => {
+      const parallaxInstance = new Parallax(sceneEl.current, {
+        relativeInput: true,
+        hoverOnly: true
+      })
+
+      parallaxInstance.enable();
+
+      return () => parallaxInstance.disable();
+    }, [])
+  }
+
   return (
     <>
       <div className="arlo_tm_section relative" id="about" style={{ paddingTop: 100 }}>
