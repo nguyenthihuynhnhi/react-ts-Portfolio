@@ -1,6 +1,15 @@
 import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 const HomeCV = () => {
+
+  const handleScroll = () => {
+    const section = document.querySelector('#about');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <div className="arlo_tm_section" id="home">
@@ -13,18 +22,39 @@ const HomeCV = () => {
             <div className="content hero">
               <div className="inner_content">
                 <div className="image_wrap">
-                  <img src="img/hero/img.jpg" alt="hero" />
+                  <img src="img\hero\NHIII.jpg" alt="hero" />
                 </div>
                 <div className="name_holder">
-                  <h3>Alan <span>Michaelis</span></h3>
+                  <h3>NGUYỄN THỊ <span>HUỲNH NHI</span></h3>
                 </div>
                 <div className="text_typing">
-                  <p>I'm a <span className="arlo_tm_animation_text_word"></span></p>
+                  <p>I'm a <></>
+                    <TypeAnimation
+                      sequence={[
+                        'Freelencer',
+                        2000,
+                        'UI/UX Designer',
+                        2000,
+                        'Web Developer',
+                        2000
+                      ]}
+                      wrapper="span"
+                      speed={50}
+                      repeat={Infinity}
+                    />
+                  </p>
                 </div>
               </div>
             </div>
             <div className="arlo_tm_arrow_wrap bounce anchor">
-              <a href="#about"><i className="xcon-angle-double-down"></i></a>
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScroll();
+                }} >
+                <i className="xcon-angle-double-down"></i>
+              </a>
             </div>
           </div>
         </div>
