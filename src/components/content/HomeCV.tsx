@@ -1,5 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import avtNHIII from "@/assets/img/hero/NHIII.jpg";
 
 const HomeCV = () => {
 
@@ -22,7 +23,7 @@ const HomeCV = () => {
             <div className="content hero">
               <div className="inner_content">
                 <div className="image_wrap">
-                  <img src="img\hero\NHIII.jpg" alt="hero" />
+                  <img src={avtNHIII} alt="hero" />
                 </div>
                 <div className="name_holder">
                   <h3>NGUYỄN THỊ <span>HUỲNH NHI</span></h3>

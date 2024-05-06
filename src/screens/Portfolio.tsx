@@ -7,7 +7,7 @@ import { FloatButton } from 'antd';
 
 const Portfolio = () => {
 
-  const [hideLeftPart, setHideLeftPart] = useState<boolean>(true);
+  const [hideLeftPart, setHideLeftPart] = useState<boolean>(false);
 
   return (
     <div className="arlo_tm_wrapper_all">
