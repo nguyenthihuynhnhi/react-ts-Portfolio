@@ -5,20 +5,19 @@ import { TypeAnimation } from 'react-type-animation';
 import Parallax from 'parallax-js';
 
 const About = () => {
+  const sceneEl = useRef(null);
 
   if (sceneEl && sceneEl.current) {
-    const sceneEl = useRef(null);
-
     useEffect(() => {
       const parallaxInstance = new Parallax(sceneEl.current, {
         relativeInput: true,
         hoverOnly: true
-      })
+      });
 
       parallaxInstance.enable();
 
       return () => parallaxInstance.disable();
-    }, [])
+    }, []);
   }
 
   return (
@@ -33,12 +32,12 @@ const About = () => {
             <div className="arlo_tm_about_wrap">
               <div className="author_wrap">
                 <div className="leftbox">
-                  <div className="about_image_wrap parallax" data-relative-input="true">
-                    <div className="image layer" data-depth="0.1">
+                  <div ref={sceneEl} className="about_image_wrap parallax" data-relative-input="true">
+                    <div className="image layer" data-depth="0.2">
                       <img src="img/about/550x640.jpg" alt="550x640" />
                       <div className="inner" style={{ backgroundImage: `url(${intel})` }} ></div>
                     </div>
-                    <div className="border layer" data-depth="0.2">
+                    <div className="border layer" data-depth="0.6">
                       <img src="img/about/550x640.jpg" alt="550x640" />
                       <div className="inner"></div>
                     </div>
