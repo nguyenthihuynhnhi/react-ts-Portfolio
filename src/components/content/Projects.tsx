@@ -153,7 +153,7 @@ const Projects = () => {
         </ul>
       </Modal>
 
-      <div className="arlo_tm_section" id="projects">
+      <div className="arlo_tm_section" id="projects" style={{ paddingTop: 100 }}>
         <div className="arlo_tm_services_wrap">
           <div className="container">
             <div className="arlo_tm_title_holder">

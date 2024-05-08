@@ -1,13 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LeftPart from "../components/LeftPart";
 import Preloader from "../components/Preloader";
 import RightPart from "../components/RightPart";
 import MobileMenu from "../components/mobile/Menu";
 import { FloatButton } from 'antd';
+import { isMobile } from 'react-device-detect';
 
 const Portfolio = () => {
 
   const [hideLeftPart, setHideLeftPart] = useState<boolean>(false);
+  useEffect(() => {
+    if (isMobile) {
+      setHideLeftPart(true);
+    }
+
+  }, [isMobile]);
 
   return (
     <div className="arlo_tm_wrapper_all">
@@ -29,6 +36,7 @@ const Portfolio = () => {
 
       {/* <!-- CONTENT -->*/}
       <div className="arlo_tm_content">
+
         {/* <!-- LEFTPART -->*/}
         <LeftPart
           hideLeftPart={hideLeftPart}
@@ -48,7 +56,6 @@ const Portfolio = () => {
       </div>
       <FloatButton.BackTop tooltip={<div>Scroll to stop</div>} />
     </div>
-
   );
 };
 

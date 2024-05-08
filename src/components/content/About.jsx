@@ -6,7 +6,6 @@ import Parallax from 'parallax-js';
 import avtIntel from "@/assets/img/about/intel.jpg";
 import avt550 from "@/assets/img/about/550x640.jpg";
 
-
 const About = () => {
 
   const sceneEl = useRef(null);
@@ -48,7 +47,6 @@ const About = () => {
                       <div className="inner"></div>
                     </div>
                   </div>
-
                 </div>
                 <div className="rightbox">
                   <div className="arlo_tm_mini_title_holder">

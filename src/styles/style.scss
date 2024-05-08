@@ -283,6 +283,11 @@ img.svg {
   color: #E3872D;
 }
 
+.arlo_tm_leftpart_wrap .menu_list_wrap ul li a.active {
+  color: #E3872D;
+  /* Màu cam khi được active */
+}
+
 .arlo_tm_leftpart_wrap .menu_list_wrap ul li a:hover:before {
   width: 35px;
 }
@@ -3413,6 +3418,10 @@ img.svg {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 19px;
+}
+
+.arlo_tm_mobile_menu_wrap .mob_menu>ul>li a.active {
+  color: #E3872D
 }
 
 /*---------------------------------------------------*/
